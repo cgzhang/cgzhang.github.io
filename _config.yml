@@ -2,9 +2,9 @@
 title: Rayfox's Blog
 SEOTitle: Rayfox的博客 | Rayfox's Blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
+email: cgzhang@gmail.com
 description: "技术，想法 | 一起记录想法"
-keyword: "Rayfox, 鬼栈, @cgzhang, Rayfox的博客, Rayfox's Blog, 博客, 个人网站, 互联网, Web, Java, PHP, Mobile, 移动端, 区块链"
+keyword: "Rayfox, @cgzhang, Rayfox的博客, Rayfox's Blog, 博客, 个人网站, 互联网, Web, Java, PHP, Mobile, 移动端, 区块链"
 url: "http://cgzhang.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
