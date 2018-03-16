@@ -4,24 +4,22 @@
 
 
 
-`
 
-error_reporting(E_ALL | E_STRICT);
+	error_reporting(E_ALL | E_STRICT);
 
-define('MAGENTO_ROOT', getcwd());
-$mageFilename = MAGENTO_ROOT . '/app/Mage.php';
-require_once $mageFilename;
-umask(0);
-Mage::init();
+	define('MAGENTO_ROOT', getcwd());
+	$mageFilename = MAGENTO_ROOT . '/app/Mage.php';
+	require_once $mageFilename;
+	umask(0);
+	Mage::init();
 
-$storeCode = 'your_store_code';
-$store = Mage::getModel('core/store')->load($storeCode);
-$symbol = 'CN¥';
-$currencies = unserialize(Mage::getStoreConfig('currency/options/customsymbol', $store->getId())); 
-$currencies['CNY'] = $symbol; 
-Mage::getModel('core/config')->saveConfig('currency/options/customsymbol', serialize($currencies), 'stores', $store->getId() );
-echo $code . ' updated to CN¥' . '<br>';
+	$storeCode = 'your_store_code';
+	$store = Mage::getModel('core/store')->load($storeCode);
+	$symbol = 'CN¥';
+	$currencies = unserialize(Mage::getStoreConfig('currency/options/customsymbol', $store->getId())); 
+	$currencies['CNY'] = $symbol; 
+	Mage::getModel('core/config')->saveConfig('currency/options/customsymbol', serialize($currencies), 'stores', $store->getId() );
+	echo $code . ' updated to CN¥' . '<br>';
 
-`
 
 在网站根目录下执行这个文件，刷新cache后即可生效。
